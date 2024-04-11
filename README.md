@@ -45,7 +45,9 @@ Graph3D(parent=None, zInput=[ "cos(x) * cos(y)", "0.3 * x * y" ])
 Whenever a color is not specified (or there are more surfaces than colors specified), a random color will be applied to the surface. The colors are written as RGB, where each value ranges from 0 to 1. To specify a color for the surfaces, add them in the same order to the `colors` argument:
 
 ```python
-Graph3D(parent=None, zInput=[ "cos(x) * cos(y)", "0.3 * x * y" ], colors=[ [0, 0, 0.8] , [0.3, 0.2, 0.5] ])
+Graph3D(parent=None,
+        zInput=[ "cos(x) * cos(y)", "0.3 * x * y" ],
+        colors=[ [0, 0, 0.8] , [0.3, 0.2, 0.5] ])
 ```
 
 ![test](imgs/cap3.JPG?raw=true "Cap3")
@@ -69,9 +71,9 @@ Hold your secondary click and move your mouse vertically to move the camera clos
 
 # Issues
 
-One of the most important limitations of this package and its approach to rendering surfaces using a z = "f(x, y)" input is that the value of `z` cannot be squared and therefore cannot fully represent some surfaces such as spheres, ellipsoids, etc. The workaround for this problem is plotting the same surface twice but explicitely adding a negative sign to one of the functions so that it appears  negative. This problem is inherent to all functions that are symmetric to XY plane.
+One of the most important limitations of this package and its approach to rendering surfaces using a z = "f(x, y)" input is that the value of `z` cannot be squared and therefore cannot fully represent some surfaces such as spheres, ellipsoids, etc. The workaround for this problem is plotting the same surface twice but explicitely adding a negative sign to one of the functions so that it appears  negative. This problem is inherent to all functions that are symmetric to the XY plane.
 
-For example, in order to plot a sphere we would do the following:
+For example, in order to plot a sphere we would have to do the following:
 
 ```python
 Graph3D(parent=None, 
