@@ -22,7 +22,7 @@ Import the package with:
 from graph3d.graph3d import Graph3D
 ```
 
-Surfaces are represented with Z as a function of X and Y (for example: 2 * x * y, where z is not written in the string). There are obvious downsides to this, but this approach was selected for the sake of an intuitive and easy-to-use tool.
+Surfaces are represented with Z as a function of X and Y (for example: "2 * x * y", where z is not written in the string). There are obvious downsides to this, but this approach was selected for the sake of an intuitive and easy-to-use tool.
 
 You can display a 3D surface in an existing wx.Panel by passing your panel reference to the `parent` argument. Or just set `parent` to `None` and the 3D graph will be shown on a new wx.Frame:
 
@@ -59,12 +59,14 @@ Graph3D(parent=None,
         showAxes=False)
 ```
 
-The `deltaXY` parameter is particularly useful to render more accurate surfaces, but use carefuly since a high value can cause overhead-.
+The `deltaXY` parameter is particularly useful to render more accurately-shaped surfaces, but use it carefully since a high value can cause a lot of overhead and is not always necessary.
 
 # Controls
 3
 
 # Issues
+
+One of the most important limitations of this package and its approach to rendering surfaces using a z = "f(x, y)" input is that the value of `z` is limited to positive values and therefore cannot represent squared values of `z` which is required for surfaces such as the ellipsoid, sphere, etc.
 
 spherical coordinates
 positive and negative
