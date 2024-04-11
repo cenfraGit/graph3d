@@ -1,5 +1,5 @@
 # graph3d
-A simple 3D plotting package made with OpenGL. It uses wxPython to display the OpenGL context.
+A simple 3D plotting package made with OpenGL. It uses wxPython to display OpenGL graphics. Its main purpose is interactability as opposed to other plotting packages focused more on generating graphs that are used in academic papers or other types of documents.
 
 # Installation
 Run the following line in the terminal to create the .tar.gz file:
@@ -62,15 +62,25 @@ Graph3D(parent=None,
 The `deltaXY` parameter is particularly useful to render more accurately-shaped surfaces, but use it carefully since a high value can cause a lot of overhead and is not always necessary.
 
 # Controls
-3
+Use your primary click to rotate the camera around the origin.
+Hold your secondary click and move your mouse vertically to move the camera closer to / farther away from the origin.
 
 # Issues
 
-One of the most important limitations of this package and its approach to rendering surfaces using a z = "f(x, y)" input is that the value of `z` is limited to positive values and therefore cannot represent squared values of `z` which is required for surfaces such as the ellipsoid, sphere, etc.
+One of the most important limitations of this package and its approach to rendering surfaces using a z = "f(x, y)" input is that the value of `z` cannot be squared and therefore cannot fully represent some surfaces such as spheres, ellipsoids, etc. The workaround for this problem is plotting the same surface twice but explicitely adding a negative sign to one of the functions so that it appears  negative. This problem is inherent to all functions that are symmetric to XY plane.
 
-spherical coordinates
-positive and negative
+For example, in order to plot a sphere we would do the following:
 
-symetry about coordinate planes
+```python
+Graph3D(parent=None, 
+        zInput=["sqrt( 100 - x**2 - y**2 )", "-sqrt( 100 - x**2 - y**2 )"], 
+        colors=[ [0.8, 0, 0] , [0, 0, 0.8]], # these two colors would have to be the same
+        axRange=(-10, 10),
+        deltaXY=300) # a high value is better for sphere-like objects
+```
+
+
+
+There are some other features such as number lines along the axes, legends, graph titles, lighting, spherical coordinates, etc. that are currently missing. These may or may not be added in the future.
 
 
