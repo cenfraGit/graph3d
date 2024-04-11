@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: graph3d
+Version: 0.0.1
+Summary: A simple 3D plotting package made with OpenGL.
+Author: Miguel Angel Ceniceros
+License: GNU GPLv3
+License-File: LICENSE.txt
+Requires-Dist: pyopengl
+Requires-Dist: numpy
+Requires-Dist: wxpython
