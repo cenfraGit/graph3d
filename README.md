@@ -38,11 +38,15 @@ To add more surfaces, add them to the `zInput` list as strings:
 Graph3D(parent=None, zInput=[ "cos(x) * cos(y)", "0.3 * x * y" ])
 ```
 
+![test](imgs/cap2.JPG?raw=true "Cap2")
+
 Whenever a color is not specified (or there are more surfaces than colors specified), a random color will be applied to the surface. The colors are written as RGB, where each value ranges from 0 to 1. To specify a color for the surfaces, add them in the same order to the `colors` argument:
 
 ```python
 Graph3D(parent=None, zInput=[ "cos(x) * cos(y)", "0.3 * x * y" ], colors=[ [0, 0, 0.8] , [0.3, 0.2, 0.5] ])
 ```
+
+![test](imgs/cap3.JPG?raw=true "Cap3")
 
 There are a couple of additional parameters you can set. `deltaXY` specifies the resolution for the figure. Basically, it increases or decreases the amount of triangles that the surfaces in the scene will have. `showMeshGrid` is used to hide/show the wireframe-like lines shown on top of the surface itself. I recommend leaving it on because otherwise the figure shape may not be as easily recognized since lighting is not yet implemented. `showAxes` just hides or shows the 3D axes (which by the way, the axes with the segmented lines represent the negative axes and the ones with the solid lines represent the positive axes).
 
