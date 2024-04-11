@@ -1,6 +1,8 @@
 # graph3d
 A simple 3D plotting package made with OpenGL. It uses wxPython to display OpenGL graphics. Its main purpose is interactability as opposed to other plotting packages focused more on generating graphs that are used in academic papers or other types of documents.
 
+![test](imgs/cap4.JPG?raw=true "Cap4")
+
 # Installation
 Run the following line in the terminal to create the .tar.gz file:
 
@@ -78,6 +80,8 @@ Graph3D(parent=None,
         axRange=(-10, 10),
         deltaXY=300) # a high value is better for sphere-like objects
 ```
+
+![test](imgs/cap5.JPG?raw=true "Cap5")
 
 
 
