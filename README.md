@@ -55,6 +55,16 @@ Graph3D(parent=None,
         showAxes=False)
 ```
 
-You can use these parameters to your advantage if you are going to plot surfaces that would be drawn with spherical coordinates (which this package does not yet support). This would 
+The `deltaXY` parameter is particularly useful to render more accurate surfaces, but use carefuly since a high value can cause overhead-.
 
 # Controls
+3
+
+# Issues
+
+spherical coordinates
+positive and negative
+
+symetry about coordinate planes
+
+
