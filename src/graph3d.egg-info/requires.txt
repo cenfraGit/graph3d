@@ -1,3 +1,0 @@
-pyopengl
-numpy
-wxpython
