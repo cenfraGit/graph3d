@@ -87,15 +87,7 @@ class Graph3D(glcanvas.GLCanvas):
         self.frame.SetTitle("3D Surface")
         self.frame.SetClientSize( self.frame.FromDIP( wx.Size(800, 600) ) )
 
-        # self.main_panel = wx.Panel(self.frame)
-        # self.main_panel_sizer = wx.BoxSizer(wx.VERTICAL)
-        # self.main_panel.SetSizer(self.main_panel_sizer)
-
-        # self.panel1 = wx.Panel(self.main_panel
         self.parent = self.frame
-        
-
-
         
         
     def OnPaint(self, event):
